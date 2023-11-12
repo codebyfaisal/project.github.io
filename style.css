@@ -133,7 +133,6 @@ li {
     background-color: var(--btn-hover-color);
   }
 }
-
 /* states */
 /***** Start navbar *****/
 .navbar-section {
@@ -354,7 +353,6 @@ main {
     -o-transform: scale(1.1);
   }
 }
-
 /***** End About Section *****/
 /***** Course Section *****/
 .course-section {
@@ -430,6 +428,10 @@ main {
 
   & .media {
     background: linear-gradient(to right, #008d2a26, #ff000026);
+  }
+
+  & h3:hover {
+    text-decoration: 1.5px underline;
   }
 
   & button {
@@ -593,6 +595,10 @@ main {
 
   & h1 {
     margin: 0;
+
+    &:hover {
+      text-decoration: 2px underline;
+    }
   }
 
   & img {
@@ -639,10 +645,16 @@ main {
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
+      border: 2px solid grey;
+      padding: 2px;
     }
 
     & h3 {
       margin-bottom: 6px;
+
+      &:hover {
+        text-decoration: 1px underline;
+      }
     }
 
     & i {
@@ -697,11 +709,134 @@ main {
 
     &:focus {
       box-shadow: inset 0 0 10px 0 #78c7fc;
-      /* background-color: rgb(192, 211, 208); */
     }
   }
 }
 /***** End Contact Page Section *****/
+/***** Courses page Section *****/
+.course-page-section {
+  & h3:hover {
+    text-decoration: none;
+  }
+
+  & .course-box {
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+      scale: 1.04;
+    }
+
+    & figure {
+      position: relative;
+
+      & img {
+        filter: none;
+        -webkit-filter: none;
+      }
+      & .price {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1.3rem;
+        background-color: rgb(50, 5, 211);
+        filter: drop-shadow(inset 0 0 20px red);
+        color: cyan;
+        padding: 0.7rem;
+        font-weight: bold;
+
+        & i {
+          color: inherit;
+        }
+      }
+    }
+
+    & .box-content {
+      padding: 1.5rem;
+    }
+
+    & .category {
+      background-color: #0099ff;
+      padding: 5px;
+      display: inline-block;
+      border-radius: 2rem;
+    }
+
+    & .feedback {
+      display: flex;
+      padding: 1rem 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+
+      & i {
+        color: rgb(255, 217, 0);
+      }
+
+      & p {
+        font-size: 1.2rem;
+      }
+    }
+
+    & .btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+
+      & button {
+        margin: 0;
+        box-shadow: none;
+        background-color: #0099ff;
+        color: var(--white-color);
+
+        &:hover {
+          background-color: #0267aa;
+        }
+      }
+
+      & a {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        text-transform: lowercase;
+      }
+    }
+  }
+  .author {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    & img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: 2px solid grey;
+      padding: 2px;
+    }
+
+    & h3 {
+      margin-bottom: 6px;
+
+      & span:hover {
+        text-decoration: 1px underline;
+        color: rebeccapurple;
+      }
+    }
+
+    & i {
+      margin-right: 5px;
+    }
+  }
+}
+/***** End Courses page Section *****/
 /* ? --------------- ? */
 .last-section {
   background: linear-gradient(to top, #354fe2, #ffffff);
@@ -721,6 +856,7 @@ footer {
 
   & h2 {
     margin-bottom: 1rem;
+    text-decoration: underline;
   }
 
   & .grid {
@@ -829,7 +965,7 @@ footer .contact {
 
   & P {
     text-align: center;
+    color: black;
   }
 }
 /***** End Footer Section *****/
-
