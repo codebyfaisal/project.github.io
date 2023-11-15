@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;&family=Urbanist:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* base line */
 * {
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: capitalize;
 }
 
@@ -28,6 +28,7 @@ label {
   font-size: 1.3rem;
   letter-spacing: 0.7px;
   color: var(--para-color);
+  line-height: 2.1rem;
 }
 
 a {
@@ -161,6 +162,7 @@ option {
     ),
     url("https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: 10%;
+  background-repeat: no-repeat;
 }
 
 /* states */
@@ -247,7 +249,7 @@ option {
 /***** Start hero *****/
 main {
   background: linear-gradient(to left, #7283e4, #6ad1f1);
-  height: 100vh;
+  height: 90vh;
   position: relative;
   display: grid;
 }
@@ -351,6 +353,9 @@ main {
   place-items: center;
   text-align: center;
   margin-bottom: 5rem;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem lightgray;
 }
 
 .about-section .icon {
@@ -569,7 +574,7 @@ main {
   }
 }
 /***** End Partners Section *****/
-/***** contact Section *****/
+/***** Bottom contact Section *****/
 .contact-section {
   margin-top: 2rem;
 
@@ -603,7 +608,7 @@ main {
     }
   }
 }
-/***** End contact Section *****/
+/***** End Bottom contact Section *****/
 
 .last-section {
   background: linear-gradient(to top, #354fe2, #7d8de4, #ffffff);
@@ -736,7 +741,6 @@ footer .contact {
   }
 }
 /***** End Footer Section *****/
-
 /* ? --------------- Pages --------------- ? */
 /***** Blog page Section *****/
 .blog-page-section {
@@ -756,7 +760,6 @@ footer .contact {
 .blog {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.288);
   border-radius: 5px;
-  min-width: 300px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -855,6 +858,7 @@ footer .contact {
     gap: 0.5rem;
     background-color: var(--supporting2-color);
     padding: 2rem;
+    min-width: 500px;
 
     .grid {
       padding: 0;
@@ -883,6 +887,28 @@ footer .contact {
     }
   }
 }
+
+.contact-box {
+  & .grid {
+    gap: 2rem;
+    place-items: center;
+    font-size: 1.6rem;
+    background: #d1dadd;
+    box-shadow: 0 0 6rem 0 #ccc;
+    border-radius: 0.5rem;
+  }
+
+  & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & i {
+      font-size: 3rem;
+    }
+  }
+}
 /***** End Contact Page Section *****/
 /***** Courses page Section *****/
 .course-page-section {
@@ -898,7 +924,6 @@ footer .contact {
   }
 
   & .course-search-box {
-    /* background-color: #003b993a; */
     box-shadow: 0 0 20px 0 rgb(197, 191, 191);
     background-color: #dff0f5;
     width: max-content;
@@ -1089,7 +1114,6 @@ footer .contact {
     }
   }
 }
-/***** End Courses page Section *****/
 /***** Reviews Section *****/
 .review-section {
   .grid {
@@ -1135,8 +1159,17 @@ footer .contact {
   }
 }
 /***** End Reviews Section *****/
+/***** End Courses page Section *****/
 /***** Services Page Section *****/
 .services-page-section {
+  & .top-bg {
+    background-image: linear-gradient(
+        rgba(130, 134, 190, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+
   & .grid {
     gap: 3rem 5rem;
   }
@@ -1204,8 +1237,7 @@ footer .contact {
     }
   }
 }
-/***** End Services Page Section *****/
-/***** Pricing page Section Section *****/
+/***** Pricing Section Section *****/
 .pricing-page-section {
   background-color: rgba(0, 255, 255, 0.082);
   padding: 1rem 0;
@@ -1259,7 +1291,7 @@ footer .contact {
   }
 
   & .detail {
-    gap: 0.5rem;
+    gap: 3rem;
     flex-direction: column;
     text-align: center;
   }
@@ -1268,7 +1300,7 @@ footer .contact {
     font-size: 3rem;
   }
   & .rs {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   & .pp {
     text-transform: uppercase;
@@ -1305,4 +1337,199 @@ footer .contact {
     scale: 1.03;
   }
 }
-/***** End Pricing page Section Section *****/
+/***** End Pricing Section Section *****/
+/***** End Services Page Section *****/
+/***** About page Section *****/
+.about-page-section {
+  & .top-bg {
+    background-image: linear-gradient(
+        rgba(130, 134, 190, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: 0 120%;
+  }
+}
+.about {
+  gap: 5rem;
+  width: 80%;
+  margin: 5rem auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+
+  & img {
+    width: 400px;
+    aspect-ratio: 1;
+  }
+
+  & h3 {
+    color: purple;
+    font-weight: bold;
+  }
+  & h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+}
+/***** Team Section *****/
+.team-page-section {
+  & .grid {
+    gap: 2rem;
+  }
+}
+
+.team {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #ccc;
+  border-bottom: 2px solid darkcyan;
+  border-radius: 0.3rem;
+
+  & img {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  & .team-content {
+    margin: 1rem 0;
+  }
+  & .media-icons {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #00000027,
+      rgba(255, 255, 255, 0.562)
+    );
+    transition: all 0.3s ease-in-out;
+
+    & ul {
+      height: 100%;
+      transform: translateY(35%);
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    & i {
+      font-size: 3rem;
+      color: black;
+
+      &:hover {
+        color: darkcyan;
+      }
+    }
+  }
+  &:hover .media-icons {
+    top: 0%;
+  }
+}
+/***** End Team Section *****/
+/***** End About page Section *****/
+/* ? --------------- Responsive --------------- ? */
+@media (width <= 1400px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (width <= 1200px) {
+}
+
+@media (width <= 1100px) {
+  .grid-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-four-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-section .grid,
+  .course-section .grid,
+  .blog-page-section .grid,
+  .review-section .grid,
+  .pricing-page-section .grid,
+  .team-page-section .grid {
+    gap: 4rem 5rem;
+  }
+}
+
+@media (width <= 900px) {
+  #hero-drops {
+    display: none;
+  }
+}
+
+@media (width <= 850px) {
+  main {
+    height: 80vh;
+    & .hero-content {
+      padding: 0 3rem;
+    }
+    & .hero-img {
+      display: none;
+    }
+  }
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    padding: 2rem 5rem;
+  }
+
+  .grid-four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section .grid,
+  .course-section .grid,
+  .blog-page-section .grid,
+  .review-section .grid,
+  .pricing-page-section .grid,
+  .team-page-section .grid {
+    gap: 2rem;
+  }
+
+  .navbar-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero-section {
+    & .grid {
+      gap: 0;
+    }
+  }
+}
+
+@media (width <= 700px) {
+  .container {
+    padding: 2rem 20%;
+  }
+  .grid-three-cols {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (width <= 500px) {
+  .container {
+    padding: 2rem 10%;
+  }
+  /* .grid-three-cols {
+    grid-template-columns: 1fr;
+  } */
+}
+
+@media (width <= 530px) {
+  .grid-four-cols {
+    grid-template-columns: 1fr;
+    padding: 10rem;
+  }
+}
