@@ -45,7 +45,7 @@ li {
   --main-color: #0099ff;
   --supporting-color: #ff5733;
   --supporting2-color: #e3ecf7;
-  --bg-color: white;
+  --bg-color: hsl(0, 90%, 100%) ff;
   --white-color: white;
   --black-color: black;
   --font-color: #0f0d0d;
@@ -86,6 +86,7 @@ li {
   margin: 5rem 0 2rem;
   font-size: 2.8rem;
   text-align: center;
+  text-transform: uppercase;
 
   & h1 {
     font-size: 2.8rem;
@@ -96,6 +97,7 @@ li {
   display: block;
   width: 90%;
   margin: 0 auto;
+  font-size: 1.3rem;
 }
 
 .box-heading,
@@ -105,7 +107,7 @@ li {
 }
 .box-para,
 .card-para {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .btn {
   padding: 1rem;
@@ -133,6 +135,34 @@ li {
     background-color: var(--btn-hover-color);
   }
 }
+
+input::placeholder,
+textarea::placeholder,
+option {
+  font-weight: bold;
+  color: #555555bd;
+}
+
+.top-bg {
+  height: 50vh;
+  display: grid;
+  place-items: center;
+
+  & h1,
+  & p {
+    color: white;
+    padding: 0 2rem;
+    margin: 0 0 3rem;
+  }
+  background: fixed;
+  background-image: linear-gradient(
+      rgba(130, 134, 190, 0.7),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: 10%;
+}
+
 /* states */
 /***** Start navbar *****/
 .navbar-section {
@@ -486,8 +516,8 @@ main {
   padding: 4rem 3rem;
   width: 100%;
   height: 100%;
-  border-radius: 28% 72% 54% 46% / 56% 35% 65% 54%;
-  background: linear-gradient(to top, #94cef017, #76b5df);
+  border-radius: 1rem;
+  background: linear-gradient(to top, #00000035, #d5e4ee);
   transition: all 0.8s ease-in;
 
   & p,
@@ -495,7 +525,7 @@ main {
     text-align: center;
   }
   &:hover {
-    border-radius: 28% 60% 54% 56% / 50% 50% 65% 40%;
+    background: linear-gradient(to top, #00000038, #d5eee9);
   }
 }
 /***** End Choose Section *****/
@@ -504,6 +534,7 @@ main {
   & .grid {
     padding: 3rem;
     gap: 3rem;
+    background: linear-gradient(to top, #cacaca00, #b5f0ff42);
   }
 
   & h1 {
@@ -573,10 +604,150 @@ main {
   }
 }
 /***** End contact Section *****/
-/* ? --------------- ? */
+
+.last-section {
+  background: linear-gradient(to top, #354fe2, #7d8de4, #ffffff);
+}
+/***** footer Section *****/
+footer {
+  margin-top: 5rem;
+  .container {
+    padding: 0;
+  }
+
+  & p,
+  li {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+  & h2 {
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+
+  & .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    place-items: center;
+    align-items: start;
+  }
+}
+
+.footer-brand {
+  & a {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0 2rem;
+  }
+
+  .logo-text {
+    font-size: 1.8rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+
+  .highlight {
+    font-size: 1.6rem;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+  }
+}
+
+footer .links ul {
+  display: grid;
+  gap: 1rem;
+
+  & li {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+footer .contact {
+  display: grid;
+  gap: 2rem;
+
+  & .contact-icons ul {
+    display: grid;
+    gap: 1rem;
+    & li i {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  & .social-icons ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    & li {
+      width: 3.3rem;
+      height: 3.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+
+      position: relative;
+
+      &:after {
+        content: " ";
+        width: inherit;
+        height: inherit;
+        background: linear-gradient(to top, white, rgb(158, 173, 241));
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover::after {
+        rotate: 360deg;
+      }
+    }
+
+    & li i {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.copyright {
+  padding: 1rem;
+  font-weight: bold;
+  background: #3649b8;
+
+  & P {
+    text-align: center;
+    color: black;
+  }
+}
+/***** End Footer Section *****/
+
+/* ? --------------- Pages --------------- ? */
 /***** Blog page Section *****/
 .blog-page-section {
-  background-color: var(--bg-color);
+  & .top-bg {
+    background-image: linear-gradient(
+        rgba(130, 134, 190, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: 100% 80%;
+  }
 
   & .grid {
     gap: 3rem;
@@ -715,8 +886,87 @@ main {
 /***** End Contact Page Section *****/
 /***** Courses page Section *****/
 .course-page-section {
-  & h3:hover {
-    text-decoration: none;
+  padding: 0;
+  position: relative;
+
+  & .top-bg {
+    background-image: linear-gradient(
+        rgba(130, 134, 190, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+
+  & .course-search-box {
+    /* background-color: #003b993a; */
+    box-shadow: 0 0 20px 0 rgb(197, 191, 191);
+    background-color: #dff0f5;
+    width: max-content;
+    margin-top: 3rem;
+
+    & form {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    & label:nth-child(2),
+    & select {
+      width: 10rem;
+    }
+
+    & input,
+    & button,
+    & select {
+      border: none;
+      outline: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      height: 45px;
+      font-size: 1.1rem;
+      width: 100%;
+      background-color: #cddee2af;
+
+      &:focus {
+        box-shadow: 0 0 1px 1px rgb(0, 195, 255);
+      }
+    }
+
+    & #course-search {
+      min-width: 25rem;
+    }
+
+    & select {
+      width: 9rem;
+    }
+
+    & option {
+      font-weight: bold;
+      color: #555;
+    }
+
+    & button {
+      display: flex;
+      align-items: center;
+      background-color: #00c3ffde;
+      cursor: pointer;
+      width: max-content;
+      font-weight: bold;
+      gap: 0.5rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #069fdb;
+        color: white;
+      }
+
+      &:hover i {
+        transition: all 0.3s ease-in-out;
+        translate: 20%;
+      }
+    }
   }
 
   & .course-box {
@@ -726,6 +976,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
 
+    & h3:hover {
+      text-decoration: none;
+    }
     &:hover {
       scale: 1.04;
     }
@@ -837,135 +1090,219 @@ main {
   }
 }
 /***** End Courses page Section *****/
-/* ? --------------- ? */
-.last-section {
-  background: linear-gradient(to top, #354fe2, #ffffff);
-}
-/***** footer Section *****/
-footer {
-  margin-top: 5rem;
-  .container {
-    padding: 0;
-  }
-
-  & p,
-  li {
-    font-size: 1.2rem;
-    text-align: justify;
-  }
-
-  & h2 {
-    margin-bottom: 1rem;
-    text-decoration: underline;
-  }
-
-  & .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    place-items: center;
-    align-items: start;
+/***** Reviews Section *****/
+.review-section {
+  .grid {
+    gap: 3rem;
   }
 }
-
-.footer-brand {
-  & a {
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    padding: 0 0 2rem;
-  }
-
-  .logo-text {
-    font-size: 1.8rem;
-    background-color: black;
-    color: white;
-    padding: 1rem 0.5rem;
-    border-radius: 5px;
-    font-weight: bolder;
-  }
-
-  .highlight {
-    font-size: 1.6rem;
-    background-color: white;
-    color: black;
-    padding: 0.5rem;
-    margin-left: 0.5rem;
-    border-radius: 3px;
-  }
-}
-
-footer .links ul {
-  display: grid;
-  gap: 1rem;
-
-  & li {
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      color: white;
-    }
-  }
-}
-
-footer .contact {
-  display: grid;
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 8px 0 rgb(218, 218, 218);
+  border-radius: 0.5rem;
 
-  & .contact-icons ul {
-    display: grid;
-    gap: 1rem;
-    & li i {
-      font-size: 1.3rem;
-      margin-right: 0.5rem;
-    }
+  & img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 2px solid grey;
+    padding: 2px;
   }
 
-  & .social-icons ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  & .feedback {
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
 
     & li {
-      width: 3.3rem;
-      height: 3.3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-
-      position: relative;
-
-      &:after {
-        content: " ";
-        width: inherit;
-        height: inherit;
-        background: linear-gradient(to top, white, rgb(158, 173, 241));
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all 0.3s ease-in-out;
-      }
-      &:hover::after {
-        rotate: 360deg;
-      }
+      margin-bottom: 0.5rem;
     }
 
-    & li i {
-      font-size: 2.2rem;
+    & .name {
+      cursor: pointer;
+    }
+
+    & .profession {
+      color: darkcyan;
+      font-size: 1.3rem;
     }
   }
 }
+/***** End Reviews Section *****/
+/***** Services Page Section *****/
+.services-page-section {
+  & .grid {
+    gap: 3rem 5rem;
+  }
+}
+.service {
+  padding: 2rem;
+  box-shadow: rgba(61, 67, 60, 0.3) 0 0 10px 0;
+  border-radius: 0.5rem;
+  background-color: rgb(227, 231, 230);
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
 
-.copyright {
-  padding: 1rem;
-  font-weight: bold;
-  background: #3649b8;
+  overflow: hidden;
+  position: relative;
 
-  & P {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(75, 107, 121, 0.753);
+    transition: all 0.3s ease-in-out;
+  }
+
+  & .icon,
+  & p,
+  & h1 {
+    z-index: 1;
+  }
+
+  &:hover::after,
+  &:hover p,
+  &:hover h1 {
+    top: 0;
+    color: white;
+  }
+
+  & .icon {
+    display: grid;
+    place-items: center;
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 192, 203, 0.9),
+      rgba(135, 206, 235, 0.9)
+    );
+
+    & i {
+      background: conic-gradient(
+        #6e42c1 0%,
+        #9679ff 30%,
+        #66c5e3 60%,
+        #4c76ff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+/***** End Services Page Section *****/
+/***** Pricing page Section Section *****/
+.pricing-page-section {
+  background-color: rgba(0, 255, 255, 0.082);
+  padding: 1rem 0;
+  margin: 5rem auto;
+  & .grid {
+    gap: 3rem;
+  }
+}
+
+.price-box {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  color: white;
+  box-shadow: 0 0 20px 0 #686565;
+  padding: 2rem 0 5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  & * {
+    color: rgb(216, 216, 216);
+  }
+
+  & .fa-dollar-sign {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    background-color: #ccc;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+
+  & .detail,
+  & .offers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+    & ul {
+      display: grid;
+      gap: 1rem;
+
+      &:first-child {
+        filter: drop-shadow(0 0 1px cyan);
+      }
+    }
+  }
+
+  & .detail {
+    gap: 0.5rem;
+    flex-direction: column;
     text-align: center;
-    color: black;
+  }
+
+  & .ctg {
+    font-size: 3rem;
+  }
+  & .rs {
+    font-size: 6rem;
+  }
+  & .pp {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  & .btn {
+    padding: 0;
+    border-radius: 5rem;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+
+    & button {
+      font-size: 1.8rem;
+      padding: 1rem 3rem;
+      background: transparent;
+      color: rgb(61, 61, 61);
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: grey;
+      & * {
+        color: white;
+      }
+    }
+  }
+
+  &:hover {
+    scale: 1.03;
   }
 }
-/***** End Footer Section *****/
+/***** End Pricing page Section Section *****/
