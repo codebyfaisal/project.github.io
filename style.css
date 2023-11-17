@@ -880,12 +880,26 @@ footer .contact {
     gap: 2rem;
   }
 
+  .top-bg {
+    background-image: linear-gradient(
+        rgba(130, 134, 190, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+  }
+
   & form {
     display: grid;
     gap: 0.5rem;
     background-color: var(--supporting2-color);
-    padding: 2rem;
+    background-image: linear-gradient(
+      rgba(130, 134, 190, 0.7),
+      rgba(0, 0, 0, 0.5)
+    );
+    padding: 1rem;
     min-width: 400px;
+    font-weight: bold;
 
     .grid {
       padding: 0;
