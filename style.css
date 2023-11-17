@@ -620,6 +620,13 @@ footer {
     padding: 0;
   }
 
+  & .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    place-items: center;
+    align-items: start;
+  }
+
   & p,
   li {
     font-size: 1.2rem;
@@ -629,13 +636,6 @@ footer {
   & h2 {
     margin-bottom: 1rem;
     text-decoration: underline;
-  }
-
-  & .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    place-items: center;
-    align-items: start;
   }
 }
 
@@ -685,6 +685,7 @@ footer .contact {
 
   & .contact-icons ul {
     display: grid;
+
     gap: 1rem;
     & li i {
       font-size: 1.3rem;
@@ -1443,6 +1444,7 @@ footer .contact {
   .grid-three-cols {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .grid-four-cols {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1454,6 +1456,23 @@ footer .contact {
   .pricing-page-section .grid,
   .team-page-section .grid {
     gap: 4rem 5rem;
+  }
+
+  & footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    .contact {
+      grid-column: 1/3;
+      width: 100%;
+      place-items: center;
+      text-align: center;
+
+      & div ul {
+        display: flex;
+        gap: 2rem;
+        text-wrap: nowrap;
+      }
+    }
   }
 }
 
@@ -1475,6 +1494,19 @@ footer .contact {
   }
   .grid-two-cols {
     grid-template-columns: 1fr;
+  }
+
+  & footer .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    & * {
+      text-align: center;
+      gap: 3rem;
+    }
   }
 }
 
@@ -1515,6 +1547,44 @@ footer .contact {
   }
   .grid-three-cols {
     grid-template-columns: 100%;
+  }
+  & .hero-section .grid {
+    padding: 4rem 0;
+  }
+
+  & .hero-content {
+    width: 100%;
+    padding: 0;
+
+    & .hero-heading {
+      font-size: 2.3rem;
+    }
+
+    & .hero-para {
+      padding: 0;
+    }
+  }
+  
+  footer {
+    font-size: 1.2em;
+  }
+  footer p,
+  footer a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (width <= 600px) {
+  & footer .grid {
+    padding: 1rem;
+
+    .footer-para {
+      padding: 1rem;
+    }
+
+    .contact-icons ul {
+      flex-direction: column;
+    }
   }
 }
 
