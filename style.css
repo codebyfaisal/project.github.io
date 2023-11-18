@@ -12,9 +12,11 @@
 html {
   font-size: 80%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
+  transition: all 0.3s linear;
 }
 h1,
 h2,
@@ -102,6 +104,44 @@ li {
     position: absolute;
     background: white;
     color: darkcyan;
+  }
+}
+
+.to-top {
+  position: fixed;
+  display: none;
+  top: 90%;
+  right: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(38, 157, 194);
+  border-radius: 50%;
+  z-index: 9999;
+  animation: to-top 2s infinite ease-in-out alternate-reverse;
+
+  & i {
+    transform: translate(0, 25%);
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: rgb(194, 132, 38);
+
+    & i {
+      color: #fff;
+    }
+  }
+}
+
+@keyframes to-top {
+  0% {
+    transform: translateY(-1.4rem);
+  }
+  100% {
+    transform: translateY(0);
+    background-color: rgb(2, 107, 156);
   }
 }
 
@@ -376,8 +416,12 @@ main {
 }
 /***** End hero *****/
 /***** Start About Section *****/
-.about-section .grid {
-  gap: 5rem;
+.about-section {
+  position: relative;
+
+  & .grid {
+    gap: 5rem;
+  }
 }
 
 .about-section .about-box {
@@ -777,6 +821,8 @@ footer .contact {
 /* ? --------------- Pages --------------- ? */
 /***** Blog page Section *****/
 .blog-page-section {
+  position: relative;
+
   & .top-bg {
     background-image: linear-gradient(
         rgba(130, 134, 190, 0.7),
@@ -878,6 +924,8 @@ footer .contact {
 /***** End Blog page Section *****/
 /***** Contact Page Section *****/
 .contact-page-section {
+  position: relative;
+
   & .grid {
     padding: 4rem 0;
     gap: 2rem;
@@ -1206,6 +1254,8 @@ footer .contact {
 /***** End Courses page Section *****/
 /***** Services Page Section *****/
 .services-page-section {
+  position: relative;
+
   & .top-bg {
     background-image: linear-gradient(
         rgba(130, 134, 190, 0.7),
@@ -1381,6 +1431,8 @@ footer .contact {
 /***** End Services Page Section *****/
 /***** About page Section *****/
 .about-page-section {
+  position: relative;
+
   & .top-bg {
     background-image: linear-gradient(
         rgba(130, 134, 190, 0.7),

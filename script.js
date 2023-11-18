@@ -7,6 +7,7 @@ document.querySelectorAll('a').forEach(function (link) {
     }
   });
 });
+
 document.addEventListener('DOMContentLoaded', function () {
   var links = document.getElementsByTagName('a');
 
@@ -36,5 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
       event.preventDefault(); // Prevent the default link behavior while checking for file existence
     });
+  }
+});
+
+window.addEventListener('scroll', function() {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // Get 30% of the document's height
+  const scrollThreshold = 0.2 * document.documentElement.scrollHeight;
+
+  // Show/hide the button based on scroll position
+  const toTopButton = document.querySelector('.to-top');
+  if (scrollPosition > scrollThreshold) {
+    toTopButton.style.display = 'block';
+  } else {
+    toTopButton.style.display = 'none';
   }
 });
