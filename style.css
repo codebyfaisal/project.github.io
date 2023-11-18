@@ -13,7 +13,7 @@ html {
   font-size: 80%;
   overflow-x: hidden;
 }
-body{
+body {
   overflow-x: hidden;
 }
 h1,
@@ -1619,7 +1619,14 @@ footer .contact {
 @media (width <= 600px) {
   .navbar-section {
     position: relative;
+
+    & .container {
+      padding: 1.6rem 2%;
+      flex-direction: row;
+      justify-content: start;
+    }
   }
+
   .navbar-links {
     position: absolute;
     transition: all 0.2s ease-in-out;
