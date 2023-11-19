@@ -3,7 +3,7 @@
 This project is my first full website created solely using HTML and CSS. It's designed for a IT, Tech or company software house and comprises five main pages: Home, Blog, Courses, Services, and Contact.
 
 ## Preview
-<img src="imgages/preview.png" alt="preview" width="100%" height="100%">
+(imgages/preview.png)
 
 ## Features
 
