@@ -1,6 +1,6 @@
 # Software House Website
 
-This project is a website for a software house created using HTML and CSS. It consists of five main pages: Home, Blog, Courses, Services, and Contact.
+This project is my first full website created solely using HTML and CSS. It's designed for a IT, Tech or company software house and comprises five main pages: Home, Blog, Courses, Services, and Contact.
 
 ## Features
 
@@ -18,10 +18,6 @@ This project is a website for a software house created using HTML and CSS. It co
 - **Cards with Animations:**
   - Engaging and visually appealing cards are implemented throughout the website.
   - These cards include animations and hover effects to provide a dynamic user experience.
-
-## Preview
-
-Insert screenshots or GIFs showcasing the different pages and animations here.
 
 ## Technologies Used
 
