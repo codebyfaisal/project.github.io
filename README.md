@@ -10,7 +10,11 @@ This project is my first full website created solely using HTML and CSS. It's de
   - Courses: Information about available courses or learning resources.
   - Services: Details about the services offered by the software house.
   - Contact: Ways to get in touch with the team.
+  - 404 Page: 404 error page that redirects users when a link is empty or not found.
 
+  - **404 Page:**
+  - There's a custom 404 error page that redirects users when a link is empty or not found. Please note, it's not fully functional at the moment, but it's a feature I plan to improve in the future.
+    
 - **Animations and Hover Effects:**
   - The website incorporates various hover effects and cool animations to enhance user interaction and visual appeal.
   - Animations are used for elements like cards, buttons, and transitions between pages.
