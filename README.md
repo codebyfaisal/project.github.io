@@ -26,7 +26,7 @@ This project is my first full website created solely using HTML and CSS. It's de
 
 ## Preview
 
-<a href="https://codebyfaisal.github.io/project1.github.io/" target="_blank">Project Repository</a>
+<a href="https://codebyfaisal.github.io/project1.github.io/" target="_blank">Project Preview</a>
 
 ## Technologies Used
 
