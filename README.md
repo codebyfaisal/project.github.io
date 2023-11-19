@@ -13,7 +13,8 @@ This project is my first full website created solely using HTML and CSS. It's de
   - 404 Page: 404 error page that redirects users when a link is empty or not found.
 
 - **404 Page:**
-  - There's a custom 404 error page that redirects users when a link is empty or not found. Please note, it's not fully functional at the moment, but it's a feature I plan to improve in the future.
+  - There's a custom 404 error page that redirects users when a link is empty or not found.
+  - Please note, it's not fully functional at the moment, but it's a feature I plan to improve in the future.
     
 - **Animations and Hover Effects:**
   - The website incorporates various hover effects and cool animations to enhance user interaction and visual appeal.
@@ -22,6 +23,10 @@ This project is my first full website created solely using HTML and CSS. It's de
 - **Cards with Animations:**
   - Engaging and visually appealing cards are implemented throughout the website.
   - These cards include animations and hover effects to provide a dynamic user experience.
+
+## Preview
+
+[Project Preview](https://github.com/codebyfaisal/project1.github.io)
 
 ## Technologies Used
 
