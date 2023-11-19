@@ -12,7 +12,7 @@ This project is my first full website created solely using HTML and CSS. It's de
   - Contact: Ways to get in touch with the team.
   - 404 Page: 404 error page that redirects users when a link is empty or not found.
 
-  - **404 Page:**
+- **404 Page:**
   - There's a custom 404 error page that redirects users when a link is empty or not found. Please note, it's not fully functional at the moment, but it's a feature I plan to improve in the future.
     
 - **Animations and Hover Effects:**
