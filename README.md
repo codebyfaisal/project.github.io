@@ -5,6 +5,8 @@ This project is my first full website created solely using HTML and CSS. It's de
 ## Preview
 ![Website Preview img](images/preview.png)
 
+<a href="https://codebyfaisal.github.io/project1.github.io/" target="_blank">Project Preview</a>
+
 ## Features
 
 - **Pages:**
@@ -26,10 +28,6 @@ This project is my first full website created solely using HTML and CSS. It's de
 - **Cards with Animations:**
   - Engaging and visually appealing cards are implemented throughout the website.
   - These cards include animations and hover effects to provide a dynamic user experience.
-
-## Preview
-
-<a href="https://codebyfaisal.github.io/project1.github.io/" target="_blank">Project Preview</a>
 
 ## Technologies Used
 
