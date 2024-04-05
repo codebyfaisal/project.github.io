@@ -1,17 +1,6 @@
 # Software House Website
 
-This project is my first full website created solely using HTML and CSS. It's designed for a IT, Tech or company software house and comprises five main pages: Home, Blog, Courses, Services, and Contact.
-
-<script type="text/javascript">
-	atOptions = {
-		'key' : '4722c07bb368a4f2c6b0011a1b8c0a94',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.topcreativeformat.com/4722c07bb368a4f2c6b0011a1b8c0a94/invoke.js"></script>
+This project is my first full website created solely using HTML and CSS. It's designed for an IT, Tech or company software house and comprises five main pages: Home, Blog, Courses, Services, and Contact.
 
 ## Preview
 ![Website Preview img](images/preview.png)
