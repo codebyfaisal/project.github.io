@@ -5,7 +5,7 @@ This project is my first full website created solely using HTML and CSS. It's de
 ## Preview
 ![Website Preview img](images/preview.png)
 
-<a href="https://codebyfaisal.github.io/project1" target="_blank">Project Preview</a>
+<a href="https://codebyfaisal.github.io/jstinnovation" target="_blank">Project Preview</a>
 
 ## Features
 
